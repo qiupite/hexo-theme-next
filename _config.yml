@@ -120,7 +120,7 @@ seo: true
 
 # If true, will add site-subtitle to index page, added in main hexo config.
 # subtitle: Subtitle
-index_with_subtitle: false
+index_with_subtitle: true
 
 # Automatically add external URL with BASE64 encrypt & decrypt.
 exturl: false
@@ -143,7 +143,7 @@ menu:
   categories: /categories/ || th   //分类
   archives: /archives/ || archive //归档
   sitemap: /sitemap.xml || sitemap   //站点地图
-  commonweal: /404/ || heartbeat  //404
+  commonweal: /404.html || heartbeat  //404
 
 # Enable/Disable menu icons / item badges.
 menu_settings:
@@ -650,7 +650,7 @@ rating:
 # Show number of visitors to each article.
 # You can visit https://leancloud.cn get AppID and AppKey.
 leancloud_visitors:
-  enable: true
+  enable: false
   app_id: ohiC1giKUan6ypfESSOSwPKw-gzGzoHsz #<app_id>
   app_key: 3DWDc0qvNNmBtG2fGTOuyaLV #<app_key>
   # Dependencies: https://github.com/theme-next/hexo-leancloud-counter-security
@@ -687,7 +687,7 @@ busuanzi_count:
 #tencent_mta:
 
 # Enable baidu push so that the blog will push the url to baidu automatically which is very helpful for SEO.
-baidu_push: false
+baidu_push: true
 
 # Google Calendar
 # Share your recent schedule to others via calendar page.
