@@ -44,7 +44,7 @@
       {% endif %}
     </div>
 
-  {% elif theme.valine.enable and theme.valine.appid and theme.valine.appkey %}
+  {% elif theme.valine.enable and config.valine.appid and config.valine.appkey %}
     <div class="comments" id="comments">
     </div>
 

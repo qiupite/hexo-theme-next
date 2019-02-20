@@ -20,12 +20,18 @@
     el: '#comments',
     verify: {{ theme.valine.verify }},
     notify: {{ theme.valine.notify }},
-    appId: '{{ theme.valine.appid }}',
-    appKey: '{{ theme.valine.appkey }}',
+    appId: '{{ config.valine.appid }}',
+    appKey: '{{ config.valine.appkey }}',
     placeholder: '{{ theme.valine.placeholder }}',
     avatar: '{{ theme.valine.avatar }}',
     meta: guest,
     pageSize: '{{ theme.valine.pageSize }}' || 10,
     visitor: {{ theme.valine.visitor }}
   });
+  var infoEle = document.querySelector('#comments .info');
+  if (infoEle && infoEle.childNodes && infoEle.childNodes.length > 0){
+    infoEle.childNodes.forEach(function(item) {
+      item.parentNode.removeChild(item);
+    });
+  }
 </script>

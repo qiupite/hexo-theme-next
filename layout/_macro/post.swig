@@ -185,7 +185,7 @@
                   <span class="post-comments-count gitment-comments-count" data-xid="{{ url_for(post.path) }}" itemprop="commentCount"></span>
                 </a>
               </span>
-            {% elif (is_post() or theme.valine.comment_count) and theme.valine.enable and theme.valine.appid and theme.valine.appkey %}
+            {% elif (is_post() or theme.valine.comment_count) and theme.valine.enable and config.valine.appid and config.valine.appkey %}
               {{ comments() }}
                 <span class="post-meta-item-text">{{ __('post.comments_count') + __('symbol.colon') }}</span>
                 <a href="{{ url_for(post.path) }}#comments" itemprop="discussionUrl">
@@ -196,7 +196,7 @@
           {% endif %}
 
           {# LeanCloud PageView #}
-          {% if theme.leancloud_visitors.enable or (theme.valine.enable and theme.valine.appid and theme.valine.appkey and theme.valine.visitor) %}
+          {% if theme.leancloud_visitors.enable or (theme.valine.enable and config.valine.appid and config.valine.appkey and theme.valine.visitor) %}
             <span id="{{ url_for(post.path) }}" class="leancloud_visitors" data-flag-title="{{ post.title }}">
               <span class="post-meta-divider">|</span>
               <span class="post-meta-item-icon">
